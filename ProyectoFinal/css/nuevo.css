@@ -1,0 +1,166 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fondo negro */
+    overflow: hidden; /* Evitar scroll */
+}
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: 4px solid transparent; /* Borde transparente */
+    border-radius: 10px;
+    border-image: linear-gradient(90deg, #ff007a, #ff7e00, #fffb00, #00ff4f, #00e6ff) 1; /* Borde colorido */
+    animation: borderColorChange 10s infinite; /* Animación de cambio de color del borde */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 2)); /* Efecto de bloom */
+}
+
+/* Animación de cambio de color del borde */
+@keyframes borderColorChange {
+    0% {
+        border-image: linear-gradient(90deg, #ff007a, #ff7e00, #fffb00, #00ff4f, #00e6ff) 1;
+    }
+    100% {
+        border-image: linear-gradient(90deg, #00e6ff, #ff007a, #ff7e00, #fffb00, #00ff4f) 1;
+    }
+}
+
+/* Contenedor del carrito con desplazamiento */
+.carrito-contenedor {
+    max-height: 400px; /* Altura máxima ajustable */
+    overflow-y: auto; /* Activar scroll vertical */
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo ligero para el contenedor */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo de los productos */
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.producto:last-child {
+    border-bottom: none; /* Sin borde en el último producto */
+}
+
+.producto h3 {
+    font-size: 1.5rem;
+    color: #ffffff; /* Color blanco para el texto */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Añadir sombra al texto */
+}
+
+.producto p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8); /* Color blanco con un poco de transparencia */
+}
+
+/* Estilo de botones */
+button {
+    background-color: #000; /* Fondo negro */
+    color: white;
+    border: 2px solid transparent; /* Borde más delgado */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s; /* Transición de todos los estilos */
+    border-image: linear-gradient(90deg, #ff007a, #ff7e00, #fffb00, #00ff4f, #00e6ff) 1; /* Borde colorido */
+}
+
+/* Efecto de hover en botones */
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Leve fondo blanco al pasar el cursor */
+}
+
+/* Estilo del total */
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid rgba(230, 0, 0, 0.498);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.total-container h3 {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+/* Estilo del botón finalizar compra */
+.finalizar-btn {
+    padding: 10px 20px;
+    background-color: #444; /* Fondo negro */
+    border: 2px solid transparent; /* Borde más delgado */
+    border-image: linear-gradient(90deg, #ff007a, #ff7e00, #fffb00, #00ff4f, #00e6ff) 1; /* Borde colorido */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Efecto de bloom */
+}
+
+.finalizar-btn:hover {
+    background-color: #666; /* Fondo más claro al pasar el cursor */
+}
+
+/* Estilo del botón reiniciar */
+.reiniciar-btn {
+    background-color: #dc3545;
+    margin-top: 20px;
+    display: block; /* Centrar el botón de reiniciar */
+    width: 100%; /* Hacer el botón del ancho completo */
+    border: 2px solid transparent; /* Borde más delgado */
+    border-image: linear-gradient(90deg, #ff007a, #ff7e00, #fffb00, #00ff4f, #00e6ff) 1; /* Borde colorido */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Efecto de bloom */
+}
+
+.reiniciar-btn:hover {
+    background-color: #c82333;
+}
+
+/* Efecto de fondo con estrellas cayendo */
+.star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 10px;
+    background-color: white;
+    opacity: 0.8;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100vh) translateX(10vw);
+    }
+    100% {
+        transform: translateY(100vh) translateX(-10vw);
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    filter: drop-shadow(0 0 20px #ffffff); /* Efecto de bloom */
+}
